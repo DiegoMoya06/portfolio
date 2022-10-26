@@ -4,8 +4,12 @@ const en = {
         en: 'English',
         de: 'German',
         test: 'TESTING LIBRARY',
-        books: { 
-            title: 'Title'
+        about: { 
+            greeting: 'Hi, I am',
+            role: 'A Full-Stack Engineer'
+        },
+        navbar: {
+            language: 'Language'
         }
     }
 

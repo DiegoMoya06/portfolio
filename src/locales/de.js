@@ -3,8 +3,12 @@ const de = {
         en: 'Englisch',
         de: 'Deutsch',
         test: 'TESTBIBLIOTHEK',
-        books: { 
-            title: 'Title'
+        about: { 
+            greeting: 'Hallo, Ich bin',
+            role: 'Ein Full-Stack Ingenieur'
+        },
+        navbar: {
+            language: 'Sprache'
         }
     }
 };

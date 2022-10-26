@@ -107,6 +107,15 @@ const Navbar = () => {
         {showNavList ? <CloseIcon /> : <MenuIcon />}
       </button>
 
+      <button
+        type='button'
+        onClick={handleOpenMenu}
+        className='btn btn--icon nav__theme'
+        aria-label='toggle theme'
+      >
+        {t('navbar.language')} x2
+      </button>
+
       <Button
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
@@ -114,7 +123,7 @@ const Navbar = () => {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleOpenMenu}
       >
-        Language
+        {t('navbar.language')}
       </Button>
       <Menu
         id="basic-menu"

@@ -1,20 +1,23 @@
-import GitHubIcon from '@material-ui/icons/GitHub'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import { about } from '../../portfolio'
-import './About.css'
+import { useTranslation } from 'react-i18next';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { about } from '../../portfolio';
+import './About.css';
 
 const About = () => {
-  const { name, role, description, resume, social } = about
+  const { name, description, resume, social } = about;
+  const { t } = useTranslation();
+
 
   return (
     <div className='about center'>
       {name && (
         <h1>
-          Hi, I am <span className='about__name'>{name}.</span>
+          {t('about.greeting')} <span className='about__name'>{name}.</span>
         </h1>
       )}
 
-      {role && <h2 className='about__role'>A {role}.</h2>}
+      <h2 className='about__role'>{t('about.role')}.</h2>
       <p className='about__desc'>{description && description}</p>
 
       <div className='about__contact center'>
