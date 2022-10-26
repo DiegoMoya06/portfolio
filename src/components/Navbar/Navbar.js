@@ -1,22 +1,23 @@
-/* import * as React from 'react';
+import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem'; */
-import { useContext, useState, useTranslation } from 'react'
-import Brightness2Icon from '@material-ui/icons/Brightness2'
-import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
-import MenuIcon from '@material-ui/icons/Menu'
-import CloseIcon from '@material-ui/icons/Close'
-import { ThemeContext } from '../../contexts/theme'
-import { projects, skills, contact } from '../../portfolio'
-import './Navbar.css'
+import MenuItem from '@mui/material/MenuItem'; 
+import { useContext, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import Brightness2Icon from '@material-ui/icons/Brightness2';
+import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded';
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
+import { ThemeContext } from '../../contexts/theme';
+import { projects, skills, contact } from '../../portfolio';
+import './Navbar.css';
 
 const Navbar = () => {
-  /* const {t,i18n} = useTranslation(); */
+  const {t,i18n} = useTranslation(); 
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
 
-  /* const languages = ['en','de'];
+  const languages = ['en','de'];
   const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(false);
 
@@ -41,7 +42,7 @@ const Navbar = () => {
       onClick={() => handleItemClick(lng)}>
         {t(lng)}
     </MenuItem>
-  ); */
+  ); 
 
   const toggleNavList = () => setShowNavList(!showNavList)
 
@@ -106,7 +107,7 @@ const Navbar = () => {
         {showNavList ? <CloseIcon /> : <MenuIcon />}
       </button>
 
-      {/* <Button
+      <Button
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
@@ -127,7 +128,7 @@ const Navbar = () => {
         {
           items
         }
-      </Menu> */}
+      </Menu> 
     </nav>
   )
 }
